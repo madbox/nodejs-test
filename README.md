@@ -1,2 +1,2 @@
 # nodejs-test
-NodeJS first look simple HTTP REST API for 1 model, w/o DB
+NodeJS first look. This is a simple HTTP REST API application. One 1 model, w/o DB.
