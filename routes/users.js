@@ -22,7 +22,7 @@ router.delete(/^\/(\d+)$/, function(req, res) {
 
 router.post('/', function(req, res) {
     if (req.body.name) {
-        var new_item = {name: req.body.name}
+        var new_item = {name: req.body.name};
         collection.push( new_item );
         res.json(collection);
     } else {
@@ -30,10 +30,10 @@ router.post('/', function(req, res) {
     }
 });
 
+// Not implemented yet
 router.put(/^\/(\d+)$/, function(req, res) {
     console.log("update with id:" + req.params[0] );
     res.json(collection);
 });
-
 
 module.exports = router;

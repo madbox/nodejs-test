@@ -2,5 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  pre #{rootmod}
+  p
+    | Welcome to #{title}.
+    | This is a simple REST example with one resource 'users'.
+    | Try it out by starting at index: 
+    a(href='/users/') users/
+    | .
