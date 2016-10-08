@@ -1,7 +1,7 @@
 # nodejs-test
 
 NodeJS first look. This is a simple HTTP REST API application. One 1 model, w/o DB, all objects are stored in memory of application process.
-Every request logged with zeromq (works with Listener app from [I'm an inline-style link with title](https://github.com/madbox/zeromq-exercise "zeromq-exercise") app).
+Every request logged with zeromq (works with Listener app from [zeromq-exercise](https://github.com/madbox/zeromq-exercise "Github repo madbox/zeromq-exercise") app).
 
 ## Ubuntu setup:
 
