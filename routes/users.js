@@ -33,7 +33,16 @@ router.post('/', function(req, res) {
 // Not implemented yet
 router.put(/^\/(\d+)$/, function(req, res) {
     console.log("update with id:" + req.params[0] );
-    res.json(collection);
+
+    // if there is defined item in collection with id from request params[0]
+    if (collection[req.params[0]] && req.body.name) {
+        collection[req.params[0]].name = req.body.name;
+        res.json(collection[req.params[0]]);
+    } else {
+        res.status(422).send("Unprocessible data or entity not found." +
+                             " id:" + req.params[0] +
+                             " name:" + req.body.name);
+    }
 });
 
 module.exports = router;

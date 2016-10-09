@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var process = require('process');
 
-var zmq = require('zmq')
+var zmq = require('zmq');
 
 var index_router = require('./routes/index');
 var users_router = require('./routes/users');
@@ -28,7 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // middleware function to send log message via zeromq
 app.use(function(req, res, next){
-    console.log('middleware!!!');
     app.locals.zmq_log(req.method + ' ' + req.url);
     next();
 });
