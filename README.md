@@ -28,6 +28,6 @@ API:
 - Delete:
   `curl -X DELETE localhost:3000/users/4`
 - Create:
-  `curl localhost:3000/users/ --data "name=eee"`
+  `curl localhost:3000/users/ --data "name=maxim"`
 - Update:
-  Not implemented
+  `curl localhost:3000/users/1 --data "name=newname" -X PUT`
